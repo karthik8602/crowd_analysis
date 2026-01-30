@@ -1,13 +1,16 @@
 import streamlit as st
 
+# --- Page Config ---
 st.set_page_config(page_title="Crowd Analysis Project", layout="centered")
 
+# --- Main Title ---
 st.title("🎥 AI Crowd Behavior Analysis Tool")
 st.markdown("Choose which project phase you want to explore:")
 
+# --- Logo or Image ---
 st.image("https://cdn-icons-png.flaticon.com/512/616/616408.png", width=100)
 
-# --- Buttons for Navigation ---
+# --- Phase Navigation Buttons ---
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -27,5 +30,12 @@ st.divider()
 if st.button("🧠 Phase 5: Smart Classification", use_container_width=True):
     st.switch_page("pages/5_Phase5_SmartClassification.py")
 
+# --- New Phase 6 Navigation ---
+st.divider()
+st.subheader("🚀 Advanced Modules")
+if st.button("🧠 Phase 6: Advanced Behavior Detection", use_container_width=True):
+    st.switch_page("pages/6_Phase6_AdvancedBehaviorDetection.py")
+
+# --- Info Section ---
 st.markdown("---")
 st.info("Each phase runs as its own Streamlit page for clean demos and stable performance.")
